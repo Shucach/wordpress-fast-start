@@ -1,0 +1,47 @@
+/**
+* Text fonts
+ */
+@font-face {
+  font-family: "someFont";
+  font-style: 'normal'; //depend with font
+  font-weight: 'normal'; //depend with font
+  font-display: 'swap';
+  src: url('../fonts/fonts/someFont.woff2') format('woff2'),
+          url('../fonts/fonts/someFont.woff') format('woff');
+}
+
+/**
+* Icon fonts
+ */
+@font-face {
+  font-family: "svgFonts";
+  font-display: 'swap';
+  src: url('../fonts/svg-fonts/svgFonts.woff2') format('woff2'),
+          url('../fonts/svg-fonts/svgFonts.woff') format('woff');
+}
+//Do not replace this styles
+[class^="icon-"], [class*=" icon-"] {
+  font-family: "svgFonts";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bio:before {
+  content: "\E001";
+}
+
+.icon-sprout:before {
+  content: "\E002";
+}
+
+.icon-toys:before {
+  content: "\E003";
+}

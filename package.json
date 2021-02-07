@@ -1,0 +1,44 @@
+{
+  "name": "ivan-horobets",
+  "description": "Ivan Horobets developer",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "private": true
+  },
+  "author": "Ivan Horobets",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-iconfont": "^10.0.3",
+    "gulp-iconfont-css": "^3.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-mjml": "^4.0.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "imagemin-mozjpeg": "^8.0.0",
+    "mjml": "^4.6.3",
+    "node-sass": "^4.14.1",
+    "webpack": "^4.35.3",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {},
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}
