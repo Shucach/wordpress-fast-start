@@ -18,25 +18,19 @@ import UtilsClass from './classes/UtilsClass';
 import CountdownTimer from './modules/CountdownTimerClass';
 
 
-const utilsObj = new UtilsClass();
-
-utilsObj.tabsInit();
-utilsObj.toggleInit();
-utilsObj.fadePopup();
-
-new CountdownTimer('Jan 5, 2025 15:37:25', '#demo-countdown-timer');
-
-if($('body').length) {
-    console.log('Support jQuery');
-}
+// const utilsObj = new UtilsClass();
+//
+// utilsObj.tabsInit();
+// utilsObj.toggleInit();
+// utilsObj.fadePopup();
 
 /**
  * Trigger open popup
  */
-$('.trigger-open-popup').on('click', function (e) {
-    e.preventDefault();
-    $(document).trigger('trigger.show.popup', ['#popup_1', '.custom-scrollbar']);
-});
+// $('.trigger-open-popup').on('click', function (e) {
+//     e.preventDefault();
+//     $(document).trigger('trigger.show.popup', ['#popup_1', '.custom-scrollbar']);
+// });
 
 /**
  * Scrollbar

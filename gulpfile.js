@@ -26,6 +26,8 @@ const sass = require('gulp-sass');
 
 const mjml = require('gulp-mjml');
 
+const autoprefixer = require('gulp-autoprefixer');
+
 const builderFolder = 'dist';
 
 /**
@@ -33,22 +35,19 @@ const builderFolder = 'dist';
  */
 function style() {
     return gulp.src([
-        //TODO: insert before plugins load
-        //'app/sass/plugins/jquery.scrollbar.sass',
-
-        'app/sass/reset.sass',
-        'app/sass/grid.scss',
-        'app/sass/core.sass',
-        'app/sass/fonts.scss',
-        'app/sass/style.sass',
-
-        //TODO: example
-        'app/sass/example.sass',
+        'app/sass/*.sass',
+        '!app/sass/core.sass',
+        '!app/sass/example.sass',
+        '!app/sass/reset.sass',
+        '!app/sass/style.sass',
     ])
         .pipe(sass())
-        .pipe(concat('main.css'))
         .pipe(cleanCSS())
-        .pipe(rename('main.min.css'))
+        .pipe(autoprefixer({overrideBrowserslist:  ['last 2 versions']}))
+        .pipe(rename({
+            suffix: ".min",
+            extname: ".css"
+        }))
         .pipe(gulp.dest(builderFolder + '/css'));
 }
 
@@ -57,7 +56,7 @@ function style() {
  */
 function scripts() {
     return gulp.src([
-        'app/js/main.js'
+        'app/js/*.js'
     ])
         .pipe(webpack({
             // 'development' or 'production'

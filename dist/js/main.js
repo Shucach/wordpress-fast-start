@@ -112,13 +112,13 @@ var JSHelpers = /*#__PURE__*/function () {
 
   _createClass(JSHelpers, [{
     key: "getSiblings",
-
+    value:
     /**
      * Get Siblings elements
      * @param $firstChild
      * @returns {[]}
      */
-    value: function getSiblings($firstChild) {
+    function getSiblings($firstChild) {
       var allSibling = [];
 
       for (var child in $firstChild) {
@@ -343,13 +343,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
@@ -369,11 +369,11 @@ var Utils = /*#__PURE__*/function (_JSHelpers) {
 
   _createClass(Utils, [{
     key: "tabsInit",
-
+    value:
     /**
      * Tabs
      */
-    value: function tabsInit() {
+    function tabsInit() {
       var speed = 200;
       var self = this,
           $tabs = document.getElementsByClassName('tabs_wrap');
@@ -677,25 +677,20 @@ __webpack_require__.r(__webpack_exports__);
 //Classes type
 
 
+ // const utilsObj = new UtilsClass();
+//
+// utilsObj.tabsInit();
+// utilsObj.toggleInit();
+// utilsObj.fadePopup();
 
-var utilsObj = new _classes_UtilsClass__WEBPACK_IMPORTED_MODULE_0__["default"]();
-utilsObj.tabsInit();
-utilsObj.toggleInit();
-utilsObj.fadePopup();
-new _modules_CountdownTimerClass__WEBPACK_IMPORTED_MODULE_1__["default"]('Jan 5, 2025 15:37:25', '#demo-countdown-timer');
-
-if ($('body').length) {
-  console.log('Support jQuery');
-}
 /**
  * Trigger open popup
  */
+// $('.trigger-open-popup').on('click', function (e) {
+//     e.preventDefault();
+//     $(document).trigger('trigger.show.popup', ['#popup_1', '.custom-scrollbar']);
+// });
 
-
-$('.trigger-open-popup').on('click', function (e) {
-  e.preventDefault();
-  $(document).trigger('trigger.show.popup', ['#popup_1', '.custom-scrollbar']);
-});
 /**
  * Scrollbar
  */

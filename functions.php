@@ -3,9 +3,15 @@
 function keys_scripts() {
 	$version = '1.1.1';
 
-	wp_enqueue_style( 'style-name', get_template_directory_uri() . '/dist/css/main.min.css', [], $version);
+    global $template;
+    $nameTemplateFile = basename($template);
 
-	wp_enqueue_script( 'plugins-js', get_template_directory_uri() . '/dist/js/plugins.min.js', [], $version, true );
+    //Style & js depend page
+    if($nameTemplateFile == 'page-index.php') {
+        wp_enqueue_style( 'style-index', get_template_directory_uri() . '/dist/css/index-page.min.css', [], $version);
+    }
+
+	//wp_enqueue_script( 'plugins-js', get_template_directory_uri() . '/dist/js/plugins.min.js', [], $version, true );
 	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/dist/js/main.js', [], $version, true );
 }
 add_action( 'wp_enqueue_scripts', 'keys_scripts' );
