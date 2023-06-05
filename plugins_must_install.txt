@@ -1,0 +1,3 @@
+// For Multilingual
+1. Polylang (Автор: WP SYNTEX)
+2. Theme and plugin translation for Polylang (TTfP) (Автор: Marcin Kazmierski)

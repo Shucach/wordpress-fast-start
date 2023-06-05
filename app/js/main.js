@@ -13,9 +13,11 @@
  *  user [@babel/preset-env] for support es5
  */
 
+console.log('I am here!');
+
 //Classes type
-import UtilsClass from './classes/UtilsClass';
-import CountdownTimer from './modules/CountdownTimerClass';
+//import UtilsClass from './classes/UtilsClass';
+//import CountdownTimer from './modules/CountdownTimerClass';
 
 
 // const utilsObj = new UtilsClass();

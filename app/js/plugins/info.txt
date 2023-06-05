@@ -1,0 +1,3 @@
+Plugins:
+
+1. JS Carousel - https://swiperjs.com/swiper-api

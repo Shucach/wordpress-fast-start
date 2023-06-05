@@ -9,7 +9,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<h1>Index page By VTheme</h1>
+				<h1>Index page By IVTheme</h1>
             </div>
 		</div>
 	</div>

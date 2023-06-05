@@ -1,18 +1,17 @@
 <?php
 
 function keys_scripts() {
-	$version = '1.1.1';
+	$version = '1.0.0';
 
     global $template;
     $nameTemplateFile = basename($template);
 
     //Style & js depend page
     if($nameTemplateFile == 'page-index.php') {
-        wp_enqueue_style( 'style-index', get_template_directory_uri() . '/dist/css/index-page.min.css', [], $version);
+        wp_enqueue_style( 'style-index', get_template_directory_uri() . '/public/css/index-page.min.css', [], $version);
     }
 
-	//wp_enqueue_script( 'plugins-js', get_template_directory_uri() . '/dist/js/plugins.min.js', [], $version, true );
-	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/dist/js/main.js', [], $version, true );
+	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/public/js/main.js', [], $version, true );
 }
 add_action( 'wp_enqueue_scripts', 'keys_scripts' );
 
@@ -114,12 +113,11 @@ add_action( 'init', 'example_create_custom_taxonomy', 9 );
 
 
 /**
- * TODO: for multilang
  * Translate url
  * @param string $slug
  * @return string
  */
-/*
+
 function pll_get_page_url (string $slug) : string
 {
 	$slug = trim($slug, '/\\');
@@ -134,7 +132,7 @@ function is_custom_post_type(string $slug) : bool
 	$slug = trim($slug, '/\\');
 	$all_custom_post_types = get_post_types( array ( '_builtin' => FALSE ) );
 	return isset($all_custom_post_types[$slug]);
-}*/
+}
 
 function wpdocs_custom_excerpt_length( $length ) {
 	return 20;
